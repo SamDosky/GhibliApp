@@ -38,11 +38,13 @@ class People extends Component {
           name: ""
         });
       });
+      axios
+      
   };
 
   render() {
     { this.state.character}
-
+    
     return (
       <div className="container">
         <input
@@ -56,13 +58,15 @@ class People extends Component {
         <ul>
         {(this.state.character.length > 0 ? this.state.character.map(person => (
           <li>
-            {" "}
+            {" "} {console.log('this is the person information' , person)}
             Name ;-  {person.name}<br />
             {"      "}
             Age ;-  {person.age} <br /> Gender ;-  {person.gender} <br />  Film ;-  {person.films}
           </li>
         )): "not found" )}
         </ul>
+
+
       </div>
     );
   }
